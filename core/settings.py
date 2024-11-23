@@ -18,7 +18,6 @@ load_dotenv()
 
 PORT = os.environ.get("PORT", "8000")  # 8000 é o padrão
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -30,6 +29,7 @@ SECRET_KEY = os.getenv("SECRET_DJANGO_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
+CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = ["*"]
 
 # Application definition
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "previsao"
+    "previsao",
+    "corsheaders"
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "core.urls"
