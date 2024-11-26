@@ -72,4 +72,4 @@ async def nova_previsao(request, payload: HeartInputs):
       return JsonResponse({"risco": str(prediction[0])})
 
    except Exception as e:
-      return JsonResponse({"detail": f"Ocorreu um erro ao processar a previsão: {e}"}, status=500)
+      return JsonResponse({"detail": f"Ocorreu um erro ao processar a previsão dos dados: {e}"}, status=500)
