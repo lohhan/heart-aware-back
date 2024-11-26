@@ -11,7 +11,7 @@ driver = webdriver.Chrome()  # Ensure ChromeDriver is installed
 def test_form_submission():
     try:
         # Open the form URL
-        driver.get("http://localhost:5173")  # Replace with your actual URL
+        driver.get("https://heart-aware-project.vercel.app/")  # Replace with your actual URL
         
         # Wait until the form is visible
         WebDriverWait(driver, 10).until(
@@ -49,5 +49,5 @@ def test_form_submission():
         print(f"Error occurred: {e}")
     finally:
         time.sleep(3)  # Give some time to observe the result
-
+        
 test_form_submission()
