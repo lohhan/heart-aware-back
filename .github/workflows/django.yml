@@ -17,6 +17,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Set up Chrome and ChromeDriver
+      uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-vesion: 'latest'
+        chromedriver-version: 'latest'
+
     # Configura o Python
     - name: Set up Python
       uses: actions/setup-python@v4
