@@ -31,3 +31,5 @@ Utilize pytests para rodar os testes:
 ```bash
 pytest
 ```
+
+OBS: Importante citar que para rodar o servidor localmente é preciso setar o atributo DEBUG em settings.py da pasta 'core' para True
